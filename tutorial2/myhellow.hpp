@@ -1,0 +1,5 @@
+namespace Myhellow
+{
+	void hello();
+}
+
