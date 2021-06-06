@@ -1,10 +1,8 @@
 #include <iostream>
-#include "myhellow.hpp"
+#include <gnu/libc-version.h>
 
 int main(int argc, char** argv)
 {
-	//std::cout << "progect name : " << argv[0] << std::endl;
-	Myhellow::hello();
-
+	std::printf("glibc version: %s\n", gnu_get_libc_version());
 	return 0;
 }
