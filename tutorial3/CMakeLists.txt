@@ -15,7 +15,7 @@ add_library(imported_glib2 SHARED IMPORTED)
 # setting target property for imported library (glib-2.0)
 set_target_properties(imported_glib2
 	PROPERTIES IMPORTED_LOCATION
-	/usr/share/lintian/overrides/libglib2.0-dev
+	/usr/lib/x86_64-linux-gnu/libglib-2.0.so
 )
 
 # setting glib-2.0 include path
