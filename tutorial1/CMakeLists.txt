@@ -4,5 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(tutorial1)
 
 # add the executable
-#add_executable(tutorial1 tutorial1.cpp) 
-add_executable(tutorial tutorial1.cpp) 
+add_executable(${PROJECT_NAME} tutorial1.cpp) 
