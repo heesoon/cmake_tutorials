@@ -7,9 +7,7 @@ project(tutorial2) 	# PROJECT_NAME is tutorial2
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 # add library (default static library)
-add_library(
-#	myhellow STATIC	# library name for executable
-	myhellow		# library name for executable
+add_library(myhellow STATIC
 	myhellow.hpp 
 	myhellow.cpp
 )
