@@ -1,8 +1,18 @@
-#include <iostream>
-#include <gnu/libc-version.h>
+#include <gtest/gtest.h>
 
-int main(int argc, char** argv)
+// https://google.github.io/googletest/
+
+int sum(int a, int b)
 {
-	std::printf("glibc version: %s\n", gnu_get_libc_version());
-	return 0;
+	return a+b;
+}
+
+TEST(BasicMathFunctionTest, IntSumFucTest)
+{
+	EXPECT_EQ(2, sum(1, 1));
+}
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv); 
+    return RUN_ALL_TESTS();
 }
