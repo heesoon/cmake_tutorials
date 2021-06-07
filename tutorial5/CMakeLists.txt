@@ -16,8 +16,6 @@ ExternalProject_Add(GoogleTest
 
 ExternalProject_Get_Property(GoogleTest source_dir binary_dir)
 
-message("hskim source_dir : " ${source_dir})
-
 find_package(Threads REQUIRED)
 
 file(GLOB SRCS ${PROJECT_SOURCE_DIR}/*.cpp)
@@ -29,10 +27,10 @@ add_dependencies(${PROJECT_NAME}
 	GoogleTest
 )
 
-include_directories(${source_dir}/include)
+include_directories(${source_dir}/googletest/include)
 
 # set path for libary
 target_link_libraries(${PROJECT_NAME}
 	Threads::Threads
-	${binary_dir}/libgtest.a
+	${binary_dir}/lib/libgtest.a
 )
