@@ -1,20 +1,18 @@
-pkg-config with cmake
+ExternalProject with cmake
 ==================================
 
 Description
 -----------
-cmake에서 pkg-config를 이용한 library import 방법
-cmake --help-module-list 명령어를 통해서 현재 cmake에서 지원하는 find_package들을 확인할 수 있다.
-예) FindSDL
-glib-2.0의 경우, FindGLIB* 이런 것들이 존재하지 않는다.
-따라서 find_package는 사용할 수 없고, pkg-config를 이용해서 library를 project에 Import해야 한다.
+googletest framework을 cmake ExternalProject를 이용해서 사용해본다.
+
+아래 페이지에 cmake FetchContent를 이용하는 방법도 있으나, 3.12 이상의 버전에서 지원하기    
+때문에 여기서는 하위 호환성을 위해서 ExternalProject방식을 테스트해 본다.
 
 Prerequisites
 =============
-This codes are tested under Ubuntu 18.04 64bit LTS.
-pkg-config and glib-2.0 should be installed
+This codes are tested under Ubuntu 18.04 64bit LTS.      
 
-	$pkg-config glib-2.0 --cflags --libs
+googletest framework require pthread
 
 Building
 ========
@@ -22,6 +20,7 @@ Building
     $ cmake ..
     $ make
 
-Reference
+gtest testing
 ========
-https://mirkokiefer.com/cmake-by-example-f95eb47d45b1
+    $ cd build
+    $ ./tutorial5
